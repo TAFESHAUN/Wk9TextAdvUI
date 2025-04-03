@@ -6,23 +6,24 @@
         xmlns:local="clr-namespace:Wk9TextAdvUI"
         mc:Ignorable="d"
         Title="Text Adventure" Height="500" Width="800">
+
     <Grid>
-        <!-- Story Text Block -->
-        <TextBlock Name="StoryText" TextWrapping="Wrap" FontSize="16" Margin="10" Height="150"/>
-        
+        <!-- Story Text -->
+        <TextBlock Name="StoryText" TextWrapping="Wrap" FontSize="16" Margin="10,10,10,0" Height="150"/>
+
         <!-- Player Name Input -->
         <TextBox Name="PlayerNameInput" Width="200" Height="25" Margin="93,15,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Button Name="StartButton" Content="Start Game" Click="StartGame_Click" Width="150" Height="30" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 
         <!-- Choice Buttons -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="283,0,0,10">
-            <Button Name="ChoiceAButton" Content="Choice A" Click="ChoiceA_Click" Width="150" Margin="5"/>
-            <Button Name="ChoiceBButton" Content="Choice B" Click="ChoiceB_Click" Width="150" Margin="5"/>
-            <Button Name="ChoiceCButton" Content="Choice C" Click="ChoiceC_Click" Width="150" Margin="5"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,60">
+            <Button Name="ChoiceAButton" Content="Choice A" Click="ChoiceA_Click" Width="150" Margin="5" Visibility="Hidden"/>
+            <Button Name="ChoiceBButton" Content="Choice B" Click="ChoiceB_Click" Width="150" Margin="5" Visibility="Hidden"/>
+            <Button Name="ChoiceCButton" Content="Choice C" Click="ChoiceC_Click" Width="150" Margin="5" Visibility="Hidden"/>
         </StackPanel>
 
-        <!-- Help and Quit Buttons -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10">
+        <!-- Help, Quit, and Restart Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10">
             <Button Name="HelpButton" Content="Help" Click="Help_Click" Width="100" Margin="5"/>
             <Button Name="QuitButton" Content="Quit" Click="Quit_Click" Width="100" Margin="5"/>
             <Button Name="RestartButton" Content="Restart Game" Click="RestartGame_Click" Width="150" Margin="5"/>
